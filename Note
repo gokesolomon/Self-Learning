@@ -1,0 +1,6 @@
+#How to set date: 
+date --help | less
+
+#How to chmod
+chmod 700 file_name
+./file_name
