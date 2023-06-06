@@ -1,0 +1,93 @@
+#1: %-formatting
+>>> name = "Eric"
+>>> "Hello, %s." % name
+'Hello, Eric.'
+
+#In order to insert more than one variable, you must use a tuple of those variables. Here’s how you would do that:
+
+>>> name = "Eric"
+>>> age = 74
+>>> "Hello, %s. You are %s." % (name, age)
+'Hello Eric. You are 74.'
+
+#2: str.format()
+>>> "Hello, {}. You are {}.".format(name, age)
+'Hello, Eric. You are 74.'
+
+>>> "Hello, {1}. You are {0}.".format(age, name)
+'Hello, Eric. You are 74.'
+
+>>> person = {'name': 'Eric', 'age': 74}
+>>> "Hello, {name}. You are {age}.".format(name=person['name'], age=person['age'])
+'Hello, Eric. You are 74.'
+
+You can also use ** to do this neat trick with dictionaries:
+
+>>> person = {'name': 'Eric', 'age': 74}
+>>> "Hello, {name}. You are {age}.".format(**person)
+'Hello, Eric. You are 74.'
+
+
+#Here are some of the ways f-strings can make your life easier.
+
+Simple Syntax
+>>> name = "Eric"
+>>> age = 74
+>>> f"Hello, {name}. You are {age}." OR F"Hello, {name}. You are {age}." 
+'Hello, Eric. You are 74.'
+
+#But you could also call functions. Here’s an example:
+>>> def to_lowercase(input):
+...     return input.lower()
+
+>>> name = "Eric Idle"
+>>> f"{to_lowercase(name)} is funny."
+'eric idle is funny.
+
+#You also have the option of calling a method directly:
+
+>>> f"{name.lower()} is funny."
+'eric idle is funny.'
+
+#ou could even use objects created from classes with f-strings. Imagine you had the following class:
+
+class Comedian:
+    def __init__(self, first_name, last_name, age):
+        self.first_name = first_name
+        self.last_name = last_name
+        self.age = age
+
+    def __str__(self):
+        return f"{self.first_name} {self.last_name} is {self.age}."
+
+    def __repr__(self):
+        return f"{self.first_name} {self.last_name} is {self.age}. Surprise!"
+
+
+
+#Multiline f-Strings
+You can have multiline strings:
+
+>>> name = "Eric"
+>>> profession = "comedian"
+>>> affiliation = "Monty Python"
+>>> message = (
+...     f"Hi {name}. "
+...     f"You are a {profession}. "
+...     f"You were in {affiliation}."
+... )
+>>> message
+'Hi Eric. You are a comedian. You were in Monty Python.'
+
+#Braces
+In order to make a brace appear in your string, you must use double braces:
+
+>>> f"{{70 + 4}}"
+'{70 + 4}'
+
+#Note that using triple braces will result in there being only single braces in your string:
+
+>>> f"{{{70 + 4}}}"
+'{74}'
+
+
