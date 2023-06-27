@@ -1,0 +1,12 @@
+#STACK operates on LIFO
+#push is to add value 
+#pop is to remove 0r delete
+
+#QUEUE operate FIFO
+#enqueue is to add
+#denqueue is to remove
+
+#Circular Queue in C
+#It is based on the principle that the rear end of the queue becomes equal to its front end.
+
+
