@@ -1,0 +1,250 @@
+#How to store buch of characters in a variable
+char charactername [] = "John";
+int characterage = 67;
+printf("There once was a man called %s\n", charactername);
+printf("The man's name is %s\n", charactername);
+printf("The man's age is %d\n", characterage);
+characterage = 30;
+printf("The man's age is %d\n", characterage);
+
+#Data Type
+int age =40;
+double gpa = 3.7;
+char grade = 'A';
+char phrase [] = "John";
+
+#This = 2*2*2*2=16
+printf("%f", pow(2, 4));
+#Square root of 36
+printf("%f", sqrt(36));
+#This value can never be modified
+cost int = 5;
+#GETTING INPUT FROM USER
+Scanf is used to get input from a user while
+printf is used to print something on screen
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main ()
+{
+    int age;
+    printf("Enter your age: ");
+    scanf("%d", &age);
+    printf("You are %d years old", age);
+
+return 0;
+}
+#for a string character
+ char name[5];
+    printf("Enter your me: ");
+    scanf("%s", name); /IT WILL NOT PRINT ANYTHING AFTER SPACE
+    printf("Your name is %s", name);
+#Fget will print lengthy name regardless of space in between
+char name[20];
+    printf("Enter your me: ");
+    fgets(name, 20, stdin);
+    printf("Your name is %s", name);
+#BUILDIN A BASIC CALC.
+#include <stdio.h>
+#include <stdlib.h>
+
+int main ()
+{
+    int num1;
+    int num2;
+    printf("Enter first num1: ");
+    scanf("%d", &num1);
+    printf("Enter second num2: ");
+    scanf("%d", &num2);
+    printf("Answer: %d", num1+num2);
+
+return 0;
+}
+#SCANF USES lf while printf uses f for double/float integer
+#include <stdio.h>
+#include <stdlib.h>
+
+int main ()
+{
+    char color[20];
+    char pluralNoun[20];
+    char celebrity1[20]; /WE USE THIS INSTEAD OF fgets
+    char celebrity2[20];
+    printf("Enter a color: ");
+    scanf("%s", color);
+    printf("Enter a plurlNoun: ");
+    scanf("%s", pluralNoun);
+    printf("Enter a celebrity: ");
+    scanf("%s%s", celebrity1, celebrity2);
+
+
+    printf("Roses are %s\n", color);
+    printf("%s are blue\n", pluralNoun);
+    printf("I love %s %s\n", celebrity1, celebrity2);
+
+return 0;
+}
+#ARRAYS
+#is a data structure that can store bunch of data values
+#how to create an arrays
+#varriable store single no of value
+#while arrays stores mutiple no of values
+--what type of data info i want to store
+
+    int dj [] = {2,4,6,8,10};
+    printf("%d", dj[3]); /this will print out 8, 3 is index
+    return 0;
+#I CAN ALSO MODIFY IT BY CHANGING WHAT IS IN THE ARRAY
+int dj [] = {2,4,6,8,10};
+    dj [3] = 100;
+    printf("%d", dj[3]); /this willmprint 100 as output
+#ARRAY WITHOUT KNOWING ITS VALUE
+int dj [10];
+dj [1] =20;
+printf("%d", dj[1]);
+
+#FUNCTION
+#it's a collections of codes that perform a specific tasks
+int main ()
+{ /from here to the closing curly bracket is function
+  printf("TOP " );
+    sayhi ();
+    printf("BOTTOM");
+
+    return 0;
+}
+void sayhi(){
+    printf("Hello_User ");
+}
+
+int main ()
+{
+
+    sayhi ("MIKE");
+    sayhi ("TOM");
+    sayhi ("JERY");
+
+    return 0;
+}
+void sayhi(char name []){
+    printf(" Hello %s\n", name);
+}
+
+sayhi ("MIKE", 40);
+    sayhi ("TOM", 30);
+    sayhi ("JERY", 80);
+
+    return 0;
+}
+void sayhi(char name[], int age){
+    printf(" Hello %s, you are %d\n", name, age);
+
+
+
+
+#Return Statement
+double cube(double num) {
+    return num*num*num;
+}
+
+int main ()
+{
+    printf("Answer: %f", cube(7.0));
+
+    return 0;
+
+
+#IF STATEMENT
+#include <stdio.h>
+#include <stdlib.h>
+
+
+int main ()
+{
+    if(3>2 && 2<4 && 4<2)
+        printf("True");
+    else
+    {
+        printf("False");
+    }
+
+    return 0;
+}
+
+
+#include <stdio.h>
+#include <stdlib.h>
+
+
+int main ()
+{
+    int a, b, c;
+    a=40; b=30; c=20;
+    //a=40, b=30, c=20;
+
+    if(a<=b && a>=c)
+        printf("%d", a);
+    else if(b<=a && c<a)
+    {
+        printf("%d", b);
+    }
+    else
+    {
+        printf("%d", c);
+    }
+
+    return 0;
+
+}
+
+#Negation operator
+if (!(3>2))
+	printf("True");
+#OUTPUT will be false
+#to copy during static and dynamic link
+cp type file name and end it with ../directory you want to copy to/
+
+
+#BUIDING CACULATOR
+
+#include <stdlib.h>
+#include <stdio.h>
+
+int main()
+{
+	double num1;
+	double num2;
+	char op;
+	printf("Enter a num: ");
+	scanf("%lf", &num1);
+	printf("Enter an operator: ");
+	scanf(" %c", &op);
+	printf("Enter a num: ");
+	scanf("%lf", &num2);
+
+	if(op == '+')
+    {
+        printf("%f", num1 + num2);
+    }
+    else if(op == '-')
+    {
+        printf("%f", num1 - num2);
+    }
+    else if(op == '/')
+    {
+        printf("%f", num1 / num2);
+    }
+    else if(op == '*')
+    {
+        printf("%f", num1 * num2);
+    }
+    else
+    {
+        printf("invalid operator");
+    }
+
+	return (0);
+}
+
+

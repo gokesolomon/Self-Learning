@@ -1,0 +1,17 @@
+#To run your C program on Git Bash, you can use the following steps:
+
+#1. Open your Git Bash terminal.
+
+#2. Navigate to the directory where your C file is located using the "cd" command.
+
+#3. Compile your C program by entering "gcc -o " into the terminal and pressing Enter. This will create an executable file with the name you specified after "-o".
+
+#4. Run your program by entering "./" into the terminal and pressing Enter. This will execute your program and output the result on the terminal.
+
+#For example, if your C file is named "my_program.c" and you want to name the output file "my_output",
+
+
+#you would use the following commands: gcc my_program.c -o my_output ./my_output 
+
+
+#I hope this helps! Let me know if Iyou have any more questions.
