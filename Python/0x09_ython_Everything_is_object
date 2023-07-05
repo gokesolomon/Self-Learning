@@ -1,0 +1,24 @@
+#Object is a value that variable point to 
+a = "banana"
+b = "banana"
+
+a==b || a is b
+
+#Aliased is an object or list that has two names
+>>> b[0] = 5
+>>> print a
+[5, 2, 3]
+
+#Cloning is when you modify and also keep a copy of original
+>>> a = [1, 2, 3]
+>>> b = a[:]
+>>> print b
+[1, 2, 3]
+Taking any slice of a creates a new list. In this case the slice happens to consist of the whole list.
+
+Now we are free to make changes to b without worrying about a:
+
+>>> b[0] = 5
+>>> print a
+[1, 2, 3]
+
