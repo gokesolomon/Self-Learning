@@ -1,0 +1,12 @@
+#Hash table is a data structure that use to store infomations
+#Hash function look at a certain key and evaluate it and spit out some index number and tell us what location in the array to store this information
+#How to avoid collision
+if another hash function give index that has been occupied, we will create a link list under the former index that are the same
+
+O() = (it's pronounced "Big-oh") Big-oh or O() refers to the "worst-case-scenario" runtime. Similarly, in math, it's big O notation and describes the limiting behavior of a function. If somethings O(1) that's constant time "really good". If somethings O(n) that means if the list is a million long. It is at worst going to run a million time. O() is generally the one used to determine how fast something runs because that's how fast it'll run in it's worst case.
+
+Ω = (greek letter Omega) refers to it's best case scenario. It's not used that as much as O() so I won't go into too much detail about it. But just know that if somethings Ω(1), in it's best case scenario it'll take just one time.
+
+Θ = (greek letter theta) is unique in that it is only used when the O() and Ω() runtime are the same. So like in the case of the recursive sorting algorithm merge sort. It's run time is Θ(n(log(n))). Which means that it's O(n(log(n))) and it's Ω(n(log(n))).
+
+
