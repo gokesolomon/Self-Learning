@@ -1,0 +1,12 @@
+#<h1> </h1> opening and closing tag
+# <main>
+	<p></p> .....paragraph
+	 pdjdjf ..... indentation} nested inside main
+	<!-- comment -->
+	src="link address" to image
+	alt ... to comment on image
+	<img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg" alt="A cute orange cat lying on its back.">
+	<a href="link to direct me to another page"
+	<a href="https://freecatphotoapp.com">link to cat pictures</a>
+	 <p>See more <a href="https://freecatphotoapp.com" target="_blank">cat photos</a> in our gallery.</p> ... target _blank is to open in new tab
+	</main>	
