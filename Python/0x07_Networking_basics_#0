@@ -1,0 +1,82 @@
+# What is OSI model
+The Open Systems Interconnection model (OSI model) is a conceptual model from the International Organization for Standardization (ISO) that "provides a common basis for the coordination of standards development for the purpose of systems interconnection
+
+#OSI model layer  
+In the OSI reference model, the communications between a computing system are split into seven different abstraction layers
+ Physical, Data Link, Network, Transport, Session, Presentation, and Applicatio
+
+#Internet
+The Internet (or internet)[a] is the global system of interconnected computer networks that uses the Internet protocol suite (TCP/IP)[b] to communicate between networks and devices
+For example, a web browser operates in a client–server application model and exchanges information with the Hypertext Transfer Protocol (HTTP) and an application-germane data structure, such as the HyperText Markup Language (HTML).
+World Wide Web (WWW)
+
+#What's the difference between LAN and WAN and other networks?
+
+
+Types of Area Networks
+Common types of area networks are:
+
+LAN: Local Area Network
+WAN: Wide Area Network
+WLAN: Wireless Local Area Network
+MAN: Metropolitan Area Network
+SAN: Storage Area Network, System Area Network, Server Area Network, or sometimes Small Area Network
+CAN: Campus Area Network, Controller Area Network, or sometimes Cluster Area Network
+PAN: Personal Area Network
+LAN and WAN are the two primary and best-known categories of area networks, while the others have emerged with technology advances.
+
+#What is a MAC Address?
+A Media Access Control (MAC) address is a string of characters that identifies a device on a network. It’s tied to a key connection device in your computer called the network interface card, or NIC.
+Every NIC has a hardware address that’s known as a MAC address. Whereas IP addresses are associated with a networking software called TCP/IP, MAC addresses are linked to the hardware of network adapters.
+
+#What is a MAC address used for?
+MAC addresses are very useful in diagnosing network issues such as problems with IP addresses.
+#Difference Between MAC Address and IP Address
+The basic difference between an IP address and a MAC address is that an IP address represents software and a MAC address represents hardware. The MAC address identifies specific devices within the same local network and the IP address identifies those devices outside of the local network.
+#IP Addresses Explained
+#There are two flavors of IP Addresses that can be used on a network. The first, and the version that the Internet and most routers are currently configured for, is
+#1 IPv4 or Internet Protocol version 4. This version uses 32-bit addresses,
+#2 IPv6, or Internet Protocol version 6, that would change the address size from 32-bit address to 128-bit addresses
+
+
+#The Address Itself
+An IP address always consists of 4 numbers separated by periods, with the numbers having a possible range of 0 through 255. An example of how an IP address appears is: 192.168.1.10
+
+Out of these addresses there are 3 special ranged that are reserved for special purposes. The first is the 0.0.0.0 address and refers to the default network and the 255.255.255.255 address which is called the broadcast address. These addresses are used for routing, which will not be covered in this tutorial. The third address, 127.0.0.1, is the loopback address, and refers to your machine. Whenever you see, 127.0.0.1, you are actually referring to your own machine. That means if you clicked on this link, http://127.0.0.1, you are actually trying to connect to your own computer, and unless you have a web server running, you will get a connection error.
+
+That means that if you have two computers on your network, each must have a different IP address to be able to communicate with each other. If by accident the same IP address is assigned to two computers, then those computers would have what is called an "IP Conflict" and not be able to communicate with each other.
+
+#Common Problems and Resolutions
+
+The most common problem people have is by accident assigning an IP address to a device on your network that is already assigned to another device. When this happens, the other computers will not know which device should get the information, and you can experience erratic behavior. On most operating systems and devices, if there are two devices on the local network that have the same IP address, it will generally give you a "IP Conflict" warning. If you see this warning, that means that the device giving the warning, detected another device on the network using the same address.
+
+The best solution to avoid a problem like this is to use a service called DHCP that almost all home routers provide. DHCP, or Dynamic Host Configuration Protocol, is a service that assigns addresses to devices and computers. You tell the DHCP server what range of IP addresses you would like it to assign, and then the DHCP server takes the responsibility of assigning those IP addresses to the various devices and keeping track so those IP addresses are assigned only once.
+
+#What is the difference between public and private IP address?
+
+A public IP address is an IP address that can be accessed over the Internet. Like postal address used to deliver a postal mail to your home, a public IP address is the globally unique IP address assigned to a computing device. Your public IP address can be found at What is my IP Address page. Private IP address, on the other hand, is used to assign computers within your private space without letting them directly expose to the Internet. For example, if you have multiple computers within your home you may want to use private IP addresses to address each computer within your home. In this scenario, your router gets the public IP address, and each of the computers, tablets and smartphones connected to your router (via wired or wifi) gets a private IP address from your router via DHCP protocol.
+What is public IP address?
+A public IP address is the address that is assigned to a computing device to allow direct access over the Internet. A web server, email server and any server device directly accessible from the Internet are candidate for a public IP address. A public IP address is globally unique, and can only be assigned to a unique device.
+
+What is private IP address?
+A private IP address is the address space allocated by InterNIC to allow organizations to create their own private network. There are three IP blocks (1 class A, 1 class B and 1 class C) reserved for a private use. The computers, tablets and smartphones sitting behind your home, and the personal computers within an organizations are usually assigned private IP addresses. A network printer residing in your home is assigned a private address so that only your family can print to your local printer.
+
+When a computer is assigned a private IP address, the local devices see this computer via it's private IP address. However, the devices residing outside of your local network cannot directly communicate via the private IP address, but uses your router's public IP address to communicate. To allow direct access to a local device which is assigned a private IP address, a Network Address Translator (NAT) should be used.
+
+#What's the Difference Between TCP and UDP?
+
+TCP/IP is a suite of protocols used by devices to communicate over the Internet and most local networks. It is named after two of it's original protocols---the Transmission Control Protocol (TCP) and the Internet Protocol (IP). TCP provides apps a way to deliver (and receive) an ordered and error-checked stream of information packets over the network. The User Datagram Protocol (UDP) is used by apps to deliver a faster stream of information by doing away with error-checking. When configuring some network hardware or software, you may need to know the difference.
+
+#localhost
+In computer networking, localhost is a hostname that refers to the current computer used to access it. It is used to access the network services that are running on the host via the loopback network interface. Using the loopback interface bypasses any local network interface hardware.
+
+Loopback
+The local loopback mechanism may be used to run a network service on a host without requiring a physical network interface, or without making the service accessible from the networks the computer may be connected to. For example, a locally installed website may be accessed from a Web browser by the URL http://localhost to display its home page.
+
+The name localhost normally resolves to the IPv4 loopback address 127.0.0.1, and to the IPv6 loopback address ::1.
+
+#ping (networking utility)
+ping is a computer network administration software utility used to test the reachability of a host on an Internet Protocol (IP) network. It is available for virtually all operating systems that have networking capability, including most embedded network administration software.
+
+Ping operates by means of Internet Control Message Protocol (ICMP) packets
+Pinging involves sending an ICMP echo request to the target host and waiting for an ICMP echo reply. The program reports errors, packet loss, and a statistical summary of the results, typically including the minimum, maximum, the mean round-trip times, and standard deviation of the mean.

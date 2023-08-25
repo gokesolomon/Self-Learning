@@ -4,3 +4,30 @@ date --help | less
 #How to chmod
 chmod 700 file_name
 ./file_name
+
+#Addition and Multiplication in shell script
+echo $(( 3 * 2 ));  echo $(( 3 + 2 )); echo $((2+1))
+
+#So to check the exit status, we could write the script this way:
+cd "$some_directory"
+if [ "$?" = "0" ]; then
+  rm *
+else
+  echo "Cannot change directory!" 1>&2
+  exit 1
+fi
+#Using if, we could write it this way:
+
+# A better way
+
+if cd "$some_directory"; then
+  rm ./*
+else
+  echo "Could not change directory! Aborting." 1>&2
+  exit 1
+fi
+
+true; echo $?
+0
+false; echo $?
+1

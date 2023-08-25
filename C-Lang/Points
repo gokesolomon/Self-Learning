@@ -247,4 +247,18 @@ int main()
 	return (0);
 }
 
+#% CALCULATION
+#include <stdlib.h>
+#include <stdio.h>
+
+int main()
+{
+    int num = 2000;
+    float percent = 0.10;
+    float result = num * percent;
+    printf("10 percent of 2000 is: %.2f\n", result);
+
+    return (0);
+}
+
 
